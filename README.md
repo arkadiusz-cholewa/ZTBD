@@ -1,7 +1,7 @@
 # ZTBD (Zaawansowane technologie baz danych)
 ### Temat projektu: "System rezerwacji pokoi hotelowych" ###
 
-### Wymagania funkcjonalne: ###
+### Podstawowe elementy systemu: ###
 - logowanie
 - rejestracja
 - administracja aplikacją:
