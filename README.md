@@ -36,5 +36,5 @@ Body:
 ```
 Response ([JWT](https://jwt.io/)):
 ```
-Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0MiIsImV4cCI6MTU0MjA0MzE3OH0.uMfTMxniNJZGBt0sounLQYh68jQlOotXAgPXyfB8JHyaCe82xmlzc4B5HAL2398cWDnzwJH_3UDCKkKdttDlrA
+Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0MjA0MzU4N30.WkuFu2kOyvqkxwm3uzEaRYerrSqCdxzhrgFpKKSS8GG1k98-fqEj0vGHkL-X9VmUZAu-vrKLjwCXoQCAHD_4LQ
 ```
