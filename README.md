@@ -16,7 +16,7 @@
 
 
 ### Endpointy: ###
-#### POST http://localhost:8181/users/sign-up ####
+- #### POST http://localhost:8181/users/sign-up ####
 Body: 
 ```
 {
@@ -26,7 +26,7 @@ Body:
 	"admin": true
 }
 ```
-#### POST http://localhost:8181/login ####
+- #### POST http://localhost:8181/login ####
 Body: 
 ```
 {
