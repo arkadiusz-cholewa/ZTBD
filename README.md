@@ -14,7 +14,7 @@
 - appliaction logger / events
 - miejsce przechowywania ustawień aplikacji
 
-
+---
 ### Endpoints: ###
 #### POST http://localhost:8181/users/sign-up ####
 Body: 
@@ -26,6 +26,7 @@ Body:
 	"admin": true
 }
 ```
+
 #### POST http://localhost:8181/login ####
 Body: 
 ```
