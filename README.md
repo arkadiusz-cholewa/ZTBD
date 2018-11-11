@@ -15,7 +15,7 @@
 - miejsce przechowywania ustawień aplikacji
 
 
-### Endpointy: ###
+### Endpoints: ###
 #### POST http://localhost:8181/users/sign-up ####
 Body: 
 ```
