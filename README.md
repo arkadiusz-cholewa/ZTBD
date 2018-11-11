@@ -2,8 +2,8 @@
 ### Temat projektu: "System rezerwacji pokoi hotelowych" ###
 
 ### Podstawowe elementy systemu: ###
-- logowanie
-- rejestracja
+- ☑️ logowanie
+- ☑️ rejestracja
 - administracja aplikacją:
   - zarządzanie użytkownikami
   - role / dostępy
