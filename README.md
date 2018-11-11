@@ -17,6 +17,26 @@
 - miejsce przechowywania ustawień aplikacji
 
 ---
+
+### Połączenie z bazą danych ###
+1. Do katalogu `ZTBD\src\main` dodaj katalog `resources`.
+2. Do katalogu `resources` dodaj plik `application.properties`.
+3. Uzupełnij plik `application.properties`:
+```
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+server.port=8181
+spring.datasource.url=<url>
+spring.datasource.username=<username>
+spring.datasource.password=<password>
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto = update
+```
+
+---
 ### Endpoints: ###
 #### POST http://localhost:8181/users/sign-up ####
 Body: 
