@@ -1,6 +1,8 @@
 # ZTBD (Zaawansowane technologie baz danych)
 ### Temat projektu: "System rezerwacji pokoi hotelowych" ###
 
+#### Technologie: Java, Spring Boot, PostgreSQL, JPA, Hibernate, JWT ####
+
 ### Podstawowe elementy systemu: ###
 ☑️ logowanie <br/>
 ☑️ rejestracja
