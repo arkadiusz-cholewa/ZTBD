@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: db/evolutions/01.sql
