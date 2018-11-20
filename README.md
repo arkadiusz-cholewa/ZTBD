@@ -9,6 +9,8 @@
 - administracja aplikacją:
   - zarządzanie użytkownikami
   - role / dostępy
+  <br/>
+☑️ [wersjonowanie bazy danych (liquibase)](https://www.liquibase.org/)
 - zaproponować sposób przechowywania:
   - plików
   - słowników
