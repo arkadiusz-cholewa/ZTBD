@@ -16,6 +16,7 @@
   - słowników
   - StaticResources np. teksty dla UI
 - appliaction logger / events
+- [keep a changelog](https://keepachangelog.com/en/1.0.0/)
 - miejsce przechowywania ustawień aplikacji
 
 ---
