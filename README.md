@@ -64,3 +64,9 @@ Response ([JWT](https://jwt.io/)):
 ```
 Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0MjA0MzU4N30.WkuFu2kOyvqkxwm3uzEaRYerrSqCdxzhrgFpKKSS8GG1k98-fqEj0vGHkL-X9VmUZAu-vrKLjwCXoQCAHD_4LQ
 ```
+---
+#### GET http://localhost:8181/admin/users ####
+#### GET http://localhost:8181/client/reservations #### <-- WIP
+#### GET http://localhost:8181/employee/hotels/:id/rooms #### <-- WIP
+#### GET http://localhost:8181/user/hotels/:id/rooms  #### <-- WIP
+
