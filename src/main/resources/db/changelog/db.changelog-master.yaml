@@ -1,3 +1,7 @@
 databaseChangeLog:
   - include:
       file: db/evolutions/01.sql
+  - include:
+      file: db/evolutions/02.sql
+  - include:
+      file: db/evolutions/03.sql
