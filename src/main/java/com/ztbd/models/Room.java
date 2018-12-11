@@ -77,4 +77,12 @@ public class Room extends AbstractEntity {
     public void setState(RoomState state) {
         this.state = state;
     }
+
+    public Room(String number, Hotel hotel, BigDecimal pricePerDay, Integer amountOfPeople, RoomState state) {
+        this.number = number;
+        this.hotel = hotel;
+        this.pricePerDay = pricePerDay;
+        this.amountOfPeople = amountOfPeople;
+        this.state = state;
+    }
 }

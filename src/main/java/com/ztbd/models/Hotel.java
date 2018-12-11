@@ -58,4 +58,60 @@ public class Hotel extends AbstractEntity {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Set<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(Set<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public Set<User> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Set<User> employees) {
+        this.employees = employees;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStreetAndNumber() {
+        return streetAndNumber;
+    }
+
+    public void setStreetAndNumber(String streetAndNumber) {
+        this.streetAndNumber = streetAndNumber;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Hotel(String name, String city, String streetAndNumber, String postalCode, String phoneNumber) {
+        this.name = name;
+        this.city = city;
+        this.streetAndNumber = streetAndNumber;
+        this.postalCode = postalCode;
+        this.phoneNumber = phoneNumber;
+    }
 }
