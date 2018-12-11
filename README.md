@@ -66,6 +66,8 @@ Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0MjA0MzU4N30.WkuF
 ```
 ---
 #### GET http://localhost:8181/admin/users ####
+#### DELETE http://localhost:8181/admin/users/:id ####
+---
 #### GET http://localhost:8181/client/reservations #### <-- WIP
 #### GET http://localhost:8181/employee/hotels/:id/rooms #### <-- WIP
 #### GET http://localhost:8181/user/hotels/:id/rooms  #### <-- WIP
