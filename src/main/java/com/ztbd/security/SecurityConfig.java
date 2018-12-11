@@ -20,18 +20,31 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private CustomUserDetailService customUserDetailService;
 
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
+//                .and().csrf().disable()
+//                .authorizeRequests()
+//                .antMatchers(SIGN_UP_URL).permitAll()
+//                .antMatchers("/*/protected/**").hasRole("USER")
+//                .antMatchers("/*/admin/**").hasRole("ADMIN")
+//                .and()
+//                .addFilter(new JWTAuthenticationFilter(authenticationManager()))
+//                .addFilter(new JWTAuthorizationFilter(authenticationManager(), customUserDetailService));
+//              //  .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
                 .and().csrf().disable()
                 .authorizeRequests()
-                .antMatchers(SIGN_UP_URL).permitAll()
+               // .antMatchers(SIGN_UP_URL).permitAll()
                 .antMatchers("/*/protected/**").hasRole("USER")
-                .antMatchers("/*/admin/**").hasRole("ADMIN")
+                .antMatchers("/admin/**").hasRole("ADMIN")
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
-                .addFilter(new JWTAuthorizationFilter(authenticationManager(), customUserDetailService))
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .addFilter(new JWTAuthorizationFilter(authenticationManager(), customUserDetailService));
     }
 
     @Override
