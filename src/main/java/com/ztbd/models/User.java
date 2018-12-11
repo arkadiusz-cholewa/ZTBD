@@ -30,6 +30,14 @@ public class User extends AbstractEntity {
     @Transient
     private boolean admin;
 
+    @Transient
+    private boolean user;
+
+    @Transient
+    private boolean client;
+
+    @Transient
+    private boolean employee;
 
     @Email
     @NotBlank
@@ -83,5 +91,29 @@ public class User extends AbstractEntity {
 
     public void setAdmin(boolean admin) {
         this.admin = admin;
+    }
+
+    public boolean isUser() {
+        return  role.equals(Role.USER);
+    }
+
+    public void setUser(boolean user) {
+        this.user = user;
+    }
+
+    public boolean isClient() {
+        return  role.equals(Role.CLIENT);
+    }
+
+    public void setClient(boolean client) {
+        this.client = client;
+    }
+
+    public boolean isEmployee() {
+        return  role.equals(Role.EMPLOYEE);
+    }
+
+    public void setEmployee(boolean employee) {
+        this.employee = employee;
     }
 }
