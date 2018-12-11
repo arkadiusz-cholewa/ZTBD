@@ -41,14 +41,14 @@ spring.jpa.hibernate.ddl-auto = update
 
 ---
 ### Endpoints: ###
-#### POST http://localhost:8181/users/sign-up ####
+#### POST http://localhost:8181/sign-up ####
 Body: 
 ```
 {
 	"username": "john_doe",
 	"password": "password",
 	"name": "John Doe",
-	"admin": true
+	"role": "USER" // "CLIENT", "ADMIN", "EMPLOYEE"
 }
 ```
 
