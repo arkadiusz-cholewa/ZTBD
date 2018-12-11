@@ -5,10 +5,10 @@
 
 ### Podstawowe elementy systemu: ###
 ☑️ logowanie <br/>
-☑️ rejestracja
-☑️ administracja aplikacją:
-  ☑️ zarządzanie użytkownikami
-  ☑️ role / dostępy
+☑️ rejestracja <br/>
+☑️ administracja aplikacją <br/>
+☑️ zarządzanie użytkownikami <br/>
+☑️ role / dostępy
   <br/>
 ☑️ [wersjonowanie bazy danych (liquibase)](https://www.liquibase.org/)
 - zaproponować sposób przechowywania:
