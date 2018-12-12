@@ -1,5 +1,8 @@
 package com.ztbd.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
@@ -13,12 +16,17 @@ import java.math.BigDecimal;
         @Index(name = "idx_room_amount_od_people", columnList = "amount_of_people"),
         @Index(name = "idx_room_hotel_id", columnList = "hotel_id"),
         @Index(name = "idx_price_per_day", columnList = "price_per_day")})
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class Room extends AbstractEntity {
+
+    public Room() {
+    }
 
     @NotBlank
     @NotNull
     @Column(name = "room_number", nullable = false, length = 20)
     private String number;
+
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "hotel_id", nullable = false)
@@ -85,4 +93,5 @@ public class Room extends AbstractEntity {
         this.amountOfPeople = amountOfPeople;
         this.state = state;
     }
+
 }

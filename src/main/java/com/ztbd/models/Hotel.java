@@ -2,6 +2,9 @@ package com.ztbd.models;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
@@ -16,11 +19,16 @@ import java.util.Set;
         @Index(name = "idx_street_and_number", columnList = "street_and_number"),
         @Index(name = "idx_postal_code", columnList = "postal_code")
 })
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class Hotel extends AbstractEntity {
+
+    public Hotel() {
+    }
 
     @NotBlank
     @Column(unique = true, nullable = false, length = 255)
     private String name;
+
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "hotel")
     private Set<Room> rooms = new HashSet<>();
