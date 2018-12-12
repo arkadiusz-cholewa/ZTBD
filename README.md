@@ -12,8 +12,8 @@
 ☑️ [wersjonowanie bazy danych (liquibase)](https://www.liquibase.org/)  <br/>
 ☑️ [zaproponować sposób przechowywania: plików, słowników, StaticResources np. teksty dla UI](https://github.com/arkadiusz-cholewa/ZTBD/blob/master/FILESSTORAGE.md) <br/>
 ☑️ [keep a changelog](https://keepachangelog.com/en/1.0.0/) [CHANGELOG.md](https://github.com/arkadiusz-cholewa/ZTBD/edit/master/README.md)  <br/>
-☑️ miejsce przechowywania ustawień aplikacji
-- appliaction logger / events <br/>
+☑️ miejsce przechowywania ustawień aplikacji <br/>
+☑️ appliaction logger / events <br/>
 
 
 ---
@@ -38,7 +38,7 @@ spring.jpa.hibernate.ddl-auto = update
 
 ---
 ### Endpoints: ###
-#### POST http://localhost:8181/sign-up ####
+##### POST http://localhost:8181/sign-up #####
 Body: 
 ```
 {
@@ -49,7 +49,7 @@ Body:
 }
 ```
 
-#### POST http://localhost:8181/login ####
+##### POST http://localhost:8181/login #####
 Body: 
 ```
 {
@@ -61,11 +61,5 @@ Response ([JWT](https://jwt.io/)):
 ```
 Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0MjA0MzU4N30.WkuFu2kOyvqkxwm3uzEaRYerrSqCdxzhrgFpKKSS8GG1k98-fqEj0vGHkL-X9VmUZAu-vrKLjwCXoQCAHD_4LQ
 ```
----
-#### GET http://localhost:8181/admin/users ####
-#### DELETE http://localhost:8181/admin/users/:id ####
----
-#### GET http://localhost:8181/client/reservations #### <-- WIP
-#### GET http://localhost:8181/employee/hotels/:id/rooms #### <-- WIP
-#### GET http://localhost:8181/user/hotels/:id/rooms  #### <-- WIP
+
 
