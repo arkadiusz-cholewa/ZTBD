@@ -68,7 +68,7 @@ Zrobione :
 - Dodano opcje zarządzania hotelami i pokojami (dodawanie hoteli, przypisanie pokoju do hotelu)
 - Aplikacja umożliwia zarządzanie pracowinkami hotelu
 - Zaproponowano plan tworzenia kopii zapasowej systemu oraz odzyskiwania danych
-- Do aplikacji dodano logger
+- Do aplikacji dodano logger, który umożliwia logowanie do pliku
 
 Zaplanowane :
 - Rozbudowa panelu administracyjnego
