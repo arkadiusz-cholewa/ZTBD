@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 @EnableJpaAuditing
 @Configuration
-@ComponentScan("com.ztbd.logger")
+//@ComponentScan("com.ztbd.logger")
 public class ZtbdApplication {
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
