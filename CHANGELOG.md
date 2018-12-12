@@ -28,7 +28,7 @@ Zaplanowane :
 Zrobione :
 - Dodano wersjonowanie bazy przy pomocy Liquibase. 
 - Zaproponowano sposób przechowywania plików, słowników oraz ustawień aplikacji. 
-- Dodano podstawowy model użytkownika. Naprawiono błędy związane z rejestracją/logowaniem. 
+- Dodano podstawowy model użytkownika. Naprawiono błędy związane z rejestracją/logowaniem (zastosowanie JWT). 
 - Dodano zabezpieczenie hasła użytkownika.
 
 Zaplanowane :
