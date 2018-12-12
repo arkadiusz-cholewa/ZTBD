@@ -58,3 +58,15 @@ Zaplanowane :
 - Dodanie opcji związanych z rezerwacją (wycofanie rezerwacji, potwierdzenie rezerwacji)
 - Rozbudowa panelu administratora
 - Obsługa transakcji
+
+### Aktualizacja 6.0 -  11. XII .2018r. ###
+
+Zrobione :
+- Dodano obslugę transakcji
+- Aplikacja umożliwia rezerwacje pokoi
+- Dodano opcje zarządzania hotelami i pokojami (dodawanie hoteli, przypisanie pokoju do hotelu)
+- Aplikacja umożliwia zarządzanie pracowinkami hotelu
+
+Zaplanowane :
+- Dołączenie loggera 
+- Rozbudowa panelu administracyjnego
