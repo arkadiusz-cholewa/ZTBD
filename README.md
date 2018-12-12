@@ -14,7 +14,7 @@
 ☑️ [keep a changelog](https://keepachangelog.com/en/1.0.0/) [CHANGELOG.md](https://github.com/arkadiusz-cholewa/ZTBD/edit/master/README.md)  <br/>
 ☑️ miejsce przechowywania ustawień aplikacji <br/>
 ☑️ appliaction logger / events <br/>
-
+☑️ [Projekt kopii zapasowej dla systemu, przywracanie danych](https://github.com/arkadiusz-cholewa/ZTBD/blob/master/RECOVERYPLAN.md)  <br/>
 
 ---
 
