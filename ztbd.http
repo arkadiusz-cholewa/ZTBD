@@ -1,0 +1,116 @@
+#### Rooms ####
+
+GET http://localhost:8181/hotels/3/rooms
+
+###
+
+POST http://localhost:8181/hotels/3/rooms
+content-type: application/json
+
+{
+    "number": "503",
+    "pricePerDay": "150",
+    "amountOfPeople": "2",
+    "state": "1"
+}
+###
+PUT http://localhost:8181/hotels/3/rooms/42
+content-type: application/json
+
+{
+    "number": "11",
+    "pricePerDay": "120",
+    "amountOfPeople": "2",
+    "state": "3"
+}
+###
+DELETE http://localhost:8181/hotels/3/rooms/43
+
+
+#### Hotels ####
+
+GET http://localhost:8181/hotels
+
+###
+GET http://localhost:8181/hotels/3
+###
+POST http://localhost:8181/hotels
+content-type: application/json
+
+{
+  "name": "Imperial Hotel",
+  "city": "Krakow",
+  "streetAndNumber": "ul.Hotelowa 34",
+  "postalCode": "31-007 Krakow",
+  "phoneNumber": "+48 969-010-749"
+}
+###
+PUT http://localhost:8181/hotels/3
+content-type: application/json
+
+{
+  "id": 3,
+  "name": "Imperial Hotel",
+  "city": "Krakow",
+  "streetAndNumber": "ul.Hotelowa 34",
+  "postalCode": "31-007 Krakow",
+  "phoneNumber": "+48 969-010-749"
+}
+###
+DELETE http://localhost:8181/hotels/55
+
+### Auth ###
+POST http://localhost:8181/sign-up
+content-type: application/json
+
+{
+	"username": "john_doe",
+	"password": "password",
+	"name": "John Doe",
+    "email": "john@doe.com",
+	"role": "ADMIN"
+}
+
+###
+POST http://localhost:8181/login
+content-type: application/json
+
+{
+	"username": "john_doe",
+	"password": "password"
+}
+#### Admin ####
+
+GET http://localhost:8181/admin/users
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NDY5Njc4MH0.c5vs0Z-gCmV83fvMSi-gxQQAUemNK32xi93XIB_Nqt2ekRXllkiXLVBGQgysHQFi4nasry9qVDPM74vmPJ9fLw
+
+DELETE http://localhost:8181/admin/users/:id
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NDY5Njc4MH0.c5vs0Z-gCmV83fvMSi-gxQQAUemNK32xi93XIB_Nqt2ekRXllkiXLVBGQgysHQFi4nasry9qVDPM74vmPJ9fLw
+
+
+### Reservations ###
+
+
+GET http://localhost:8181/reservations
+
+###
+GET http://localhost:8181/reservations/1
+###
+POST http://localhost:8181/reservations/hotels/3/rooms/12/users/2
+content-type: application/json
+
+{
+  "number": "123abc",
+  "dateFrom": "2018-02-22",
+  "dateTo": "2018-02-25"
+}
+###
+PUT http://localhost:8181/reservations/60
+content-type: application/json
+
+{
+  "dateFrom": "2018-02-22",
+  "dateTo": "2018-02-27"
+}
+###
+DELETE http://localhost:8181/reservations/59
