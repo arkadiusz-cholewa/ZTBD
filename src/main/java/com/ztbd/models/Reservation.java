@@ -12,6 +12,8 @@ import java.time.LocalDate;
         @Index(name = "idx_reservation_user_id", columnList = "usr_id")
 })
 public class Reservation extends AbstractEntity{
+    public Reservation() {
+    }
 
     @NotBlank
     @Size(max = 120)
