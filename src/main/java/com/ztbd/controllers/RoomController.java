@@ -1,51 +1,65 @@
 package com.ztbd.controllers;
 
 import com.ztbd.models.Room;
+import com.ztbd.repositories.HotelRepository;
 import com.ztbd.repositories.RoomRepository;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rooms")
 public class RoomController {
 
+    @Autowired
     private RoomRepository roomRepository;
 
-    public RoomController(RoomRepository roomRepository) {
-        this.roomRepository = roomRepository;
+    @Autowired
+    private HotelRepository hotelRepository;
+
+    @GetMapping("/hotels/{hotelId}/rooms")
+    public List<Room> getAllRoomsByHotelId(@PathVariable (value = "hotelId") Long hotelId) {
+        return roomRepository.findByHotelId(hotelId);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> getRoomById(@PathVariable("id") Long id) {
-        Room room = roomRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Room", "id", id));;
-        return new ResponseEntity<>(room, HttpStatus.OK);
+    @PostMapping("/hotels/{hotelId}/rooms")
+    public Room createRoom(@PathVariable (value = "hotelId") Long hotelId,
+                                 @Valid @RequestBody Room room) {
+        return hotelRepository.findById(hotelId).map(hotel -> {
+            room.setHotel(hotel);
+            return roomRepository.save(room);
+        }).orElseThrow(() -> new ResourceNotFoundException("Hotel", "hotelId", hotelId));
     }
 
-    @GetMapping("")
-    public ResponseEntity<List<Room>> getAllRooms() {
-        List<Room> list = roomRepository.findAll();
-        return new ResponseEntity<List<Room>>(list, HttpStatus.OK);
-    }
-    @PostMapping("")
-    public ResponseEntity<Void> addRoom(@RequestBody Room room) {
-        roomRepository.saveAndFlush(room);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+    @PutMapping("/hotels/{hotelId}/rooms/{roomId}")
+    public Room updateRoom(@PathVariable (value = "hotelId") Long hotelId,
+                                 @PathVariable (value = "roomId") Long roomId,
+                                 @Valid @RequestBody Room roomRequest) {
+        if(!hotelRepository.existsById(hotelId)) {
+            throw new ResourceNotFoundException("Hotel", "hotelId", hotelId);
+        }
+
+        return roomRepository.findById(roomId).map(room -> {
+            room.setNumber(roomRequest.getNumber());
+            room.setAmountOfPeople(roomRequest.getAmountOfPeople());
+            room.setState(roomRequest.getState());
+            room.setPricePerDay(roomRequest.getPricePerDay());
+            return roomRepository.save(room);
+        }).orElseThrow(() -> new ResourceNotFoundException("Room", "roomId", roomId));
     }
 
-    @PutMapping("")
-    public ResponseEntity<Room> updateRoom(@RequestBody Room room) {
-        roomRepository.save(room);
-        return new ResponseEntity<Room>(room, HttpStatus.OK);
-    }
+    @DeleteMapping("/hotels/{hotelId}/rooms/{roomId}")
+    public ResponseEntity<?> deleteRoom(@PathVariable (value = "hotelId") Long hotelId,
+                                           @PathVariable (value = "roomId") Long roomId) {
+        if(!hotelRepository.existsById(hotelId)) {
+            throw new ResourceNotFoundException("Hotel", "hotelId", hotelId);
+        }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRoom(@PathVariable("id") Long id) {
-        roomRepository.deleteById(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return roomRepository.findById(roomId).map(room -> {
+            roomRepository.delete(room);
+            return ResponseEntity.ok().build();
+        }).orElseThrow(() -> new ResourceNotFoundException("Room", "roomId", roomId));
     }
 }
