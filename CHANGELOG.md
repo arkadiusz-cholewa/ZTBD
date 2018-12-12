@@ -66,6 +66,7 @@ Zrobione :
 - Aplikacja umożliwia rezerwacje pokoi
 - Dodano opcje zarządzania hotelami i pokojami (dodawanie hoteli, przypisanie pokoju do hotelu)
 - Aplikacja umożliwia zarządzanie pracowinkami hotelu
+- Zaproponowano plan tworzenia kopii zapasowej systemu oraz odzyskiwania danych
 
 Zaplanowane :
 - Dołączenie loggera 
