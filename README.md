@@ -37,7 +37,7 @@ spring.jpa.hibernate.ddl-auto = update
 ```
 
 ---
-### Endpoints: ###
+### Endpoints: [ztbd.http](https://github.com/arkadiusz-cholewa/ZTBD/blob/master/ztbd.http) ###
 ##### POST http://localhost:8181/sign-up #####
 Body: 
 ```
