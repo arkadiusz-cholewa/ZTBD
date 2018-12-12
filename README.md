@@ -10,7 +10,7 @@
 ☑️ zarządzanie użytkownikami <br/>
 ☑️ role / dostępy <br/>
 ☑️ [wersjonowanie bazy danych (liquibase)](https://www.liquibase.org/)  <br/>
-☑️ [zaproponować sposób przechowywania: plików, słowników, StaticResources np. teksty dla UI](https://github.com/arkadiusz-cholewa/ZTBD/blob/master/CHANGELOG.md) <br/>
+☑️ [zaproponować sposób przechowywania: plików, słowników, StaticResources np. teksty dla UI](https://github.com/arkadiusz-cholewa/ZTBD/blob/master/FILESSTORAGE.md) <br/>
 ☑️ [keep a changelog](https://keepachangelog.com/en/1.0.0/) [CHANGELOG.md](https://github.com/arkadiusz-cholewa/ZTBD/edit/master/README.md)  <br/>
 ☑️ miejsce przechowywania ustawień aplikacji
 - appliaction logger / events <br/>
