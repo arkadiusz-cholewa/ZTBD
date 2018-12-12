@@ -1,4 +1,4 @@
-Aktualizacja 1.0 -  20. X .2018r.
+### Aktualizacja 1.0 -  20. X .2018r. ###
 
 Zrobione :
 - Utworzony został projekt aplikacji zawierający podstawowy modelem bazy dla PostgreSQL. 
@@ -11,7 +11,7 @@ Zaplanowane :
 - Dodanie opcji zarządzania pokojami
 - Dodanie opcji zarządzania rezerwacją  
 
-Aktualizacja 2.0 -  30. X .2018r.
+### Aktualizacja 2.0 -  30. X .2018r. ###
 
 Zrobione :
 - Do aplikacji dodana została opcja rejestracji / logowania użytkowników w postaci podstawowej. 
@@ -23,7 +23,7 @@ Zaplanowane :
 - Dodanie opcji zarządzania rolami 
 - Dodanie opcji związanych z rezerwacją (wycofanie rezerwacji, potwierdzenie rezerwacji)
 
-Aktualizacja 3.0 -  12. XI .2018r.
+### Aktualizacja 3.0 -  12. XI .2018r. ###
 
 Zrobione :
 - Dodano wersjonowanie bazy przy pomocy Liquibase. 
@@ -36,9 +36,7 @@ Zaplanowane :
 - Dodanie opcji zarządzania rolami 
 - Dodanie opcji związanych z rezerwacją (wycofanie rezerwacji, potwierdzenie rezerwacji)
 
-
-
-Aktualizacja 4.0 -  30. XI .2018r.
+### Aktualizacja 4.0 -  30. XI .2018r. ###
 
 Zrobione :
 - Aplikacja umożliwia dodanie roli użytkownika. 
@@ -51,7 +49,7 @@ Zaplanowane :
 - Rozbudowanie panelu administratora
 - Dodanie opcji związanych z rezerwacją (wycofanie rezerwacji, potwierdzenie rezerwacji)
 
-Aktualizacja 5.0 -  9. XII .2018r.
+### Aktualizacja 5.0 -  9. XII .2018r. ###
 
 Zrobione :
 - Dodano model hoteli i pokoi. 
