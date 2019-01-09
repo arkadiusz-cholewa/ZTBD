@@ -1,10 +1,10 @@
 #### Rooms ####
 
-GET http://localhost:8181/hotels/3/rooms
+GET http://localhost:8181/hotels/5/rooms
 
 ###
 
-POST http://localhost:8181/hotels/3/rooms
+POST http://localhost:8181/hotels/5/rooms
 content-type: application/json
 
 {
@@ -41,7 +41,7 @@ content-type: application/json
   "name": "Imperial Hotel",
   "city": "Krakow",
   "streetAndNumber": "ul.Hotelowa 34",
-  "postalCode": "31-007 Krakow",
+  "postalCode": "31-007",
   "phoneNumber": "+48 969-010-749"
 }
 ###
@@ -53,11 +53,11 @@ content-type: application/json
   "name": "Imperial Hotel",
   "city": "Krakow",
   "streetAndNumber": "ul.Hotelowa 34",
-  "postalCode": "31-007 Krakow",
+  "postalCode": "31-007",
   "phoneNumber": "+48 969-010-749"
 }
 ###
-DELETE http://localhost:8181/hotels/55
+DELETE http://localhost:8181/hotels/3
 
 ### Auth ###
 POST http://localhost:8181/sign-up
@@ -82,7 +82,8 @@ content-type: application/json
 #### Admin ####
 
 GET http://localhost:8181/admin/users
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NDY5Njc4MH0.c5vs0Z-gCmV83fvMSi-gxQQAUemNK32xi93XIB_Nqt2ekRXllkiXLVBGQgysHQFi4nasry9qVDPM74vmPJ9fLw
+
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NzA2NzkxOH0.RsEjrlcYEaKHgb6_0NKG7LgFuNtAshTsnImeGHIfZNV8mz99ZkkRl9yltrnVMRlGoCsPdDWnE70I-Btbe0aztA
 
 DELETE http://localhost:8181/admin/users/:id
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NDY5Njc4MH0.c5vs0Z-gCmV83fvMSi-gxQQAUemNK32xi93XIB_Nqt2ekRXllkiXLVBGQgysHQFi4nasry9qVDPM74vmPJ9fLw
@@ -91,12 +92,13 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0N
 ### Reservations ###
 
 
-GET http://localhost:8181/reservations
+GET http://localhost:8181/protected/reservations
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NzA2NzkxOH0.RsEjrlcYEaKHgb6_0NKG7LgFuNtAshTsnImeGHIfZNV8mz99ZkkRl9yltrnVMRlGoCsPdDWnE70I-Btbe0aztA
 
 ###
-GET http://localhost:8181/reservations/1
+GET http://localhost:8181/protected/reservations/1
 ###
-POST http://localhost:8181/reservations/hotels/3/rooms/12/users/2
+POST http://localhost:8181/protected/reservations/hotels/5/rooms/7/users/2
 content-type: application/json
 
 {
@@ -105,7 +107,7 @@ content-type: application/json
   "dateTo": "2018-02-25"
 }
 ###
-PUT http://localhost:8181/reservations/60
+PUT http://localhost:8181/protected/reservations/60
 content-type: application/json
 
 {
@@ -113,4 +115,4 @@ content-type: application/json
   "dateTo": "2018-02-27"
 }
 ###
-DELETE http://localhost:8181/reservations/59
+DELETE http://localhost:8181/protected/reservations/59
