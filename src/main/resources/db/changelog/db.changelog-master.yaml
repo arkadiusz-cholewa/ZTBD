@@ -21,3 +21,5 @@ databaseChangeLog:
       file: db/evolutions/10.sql
   - include:
       file: db/evolutions/11.sql
+  - include:
+      file: db/evolutions/12.sql
