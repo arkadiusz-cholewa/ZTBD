@@ -2,7 +2,7 @@
 --changeset aleksandra.kopera:5
 
 CREATE TABLE reservations(
-id BIGINT PRIMARY KEY ,
+id BIGINT PRIMARY KEY,
 reservation_number VARCHAR (120) NOT NULL,
 hotel_id BIGINT REFERENCES hotels(id),
 room_id BIGINT REFERENCES rooms(id),
