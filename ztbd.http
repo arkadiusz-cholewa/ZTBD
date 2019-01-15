@@ -64,11 +64,11 @@ POST http://localhost:8181/sign-up
 content-type: application/json
 
 {
-	"username": "john_doe",
+	"username": "test",
 	"password": "password",
-	"name": "John Doe",
-    "email": "john@doe.com",
-	"role": "ADMIN"
+	"name": "Test",
+    "email": "test@test.com",
+	"role": "USER"
 }
 
 ###
@@ -76,7 +76,7 @@ POST http://localhost:8181/login
 content-type: application/json
 
 {
-	"username": "john_doe",
+	"username": "test",
 	"password": "password"
 }
 #### Admin ####
@@ -93,18 +93,17 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0N
 
 
 GET http://localhost:8181/protected/reservations
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0NzA2NzkxOH0.RsEjrlcYEaKHgb6_0NKG7LgFuNtAshTsnImeGHIfZNV8mz99ZkkRl9yltrnVMRlGoCsPdDWnE70I-Btbe0aztA
-
+Authorization: Bearer eyhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNTQ3MTA1Mjg3fQ.POdtc6hFeC0HOcLXakjJymO0wcZroOgMpFHS0jD-t6ncXWTTAJHcKj3X4IVM1okQMSgr-QrIygVc2o55p2vhCg
 ###
 GET http://localhost:8181/protected/reservations/1
 ###
-POST http://localhost:8181/protected/reservations/hotels/5/rooms/7/users/2
+POST http://localhost:8181/protected/reservations/hotels/3/rooms/37/users/2
 content-type: application/json
 
 {
   "number": "123abc",
-  "dateFrom": "2018-02-22",
-  "dateTo": "2018-02-25"
+  "dateFrom": "2019-01-08",
+  "dateTo": "2019-01-12"
 }
 ###
 PUT http://localhost:8181/protected/reservations/60
