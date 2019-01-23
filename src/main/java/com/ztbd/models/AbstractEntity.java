@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class AbstractEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    protected String id;
 
     @Override
     public boolean equals(Object o) {
@@ -27,11 +27,11 @@ public class AbstractEntity implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 }

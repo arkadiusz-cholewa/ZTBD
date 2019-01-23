@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "users")
-public class User extends AbstractEntity {
+public class User  {
 
     @NotBlank
     @Column(unique = true, nullable = false, length = 255)

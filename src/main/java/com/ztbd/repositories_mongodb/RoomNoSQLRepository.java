@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RoomNoSQLRepository extends MongoRepository<Room, Long> {
-    List<Room> findByHotelId(Long hotelId);
+public interface RoomNoSQLRepository extends MongoRepository<Room, String> {
+    List<Room> findByHotelId(String hotelId);
 }
