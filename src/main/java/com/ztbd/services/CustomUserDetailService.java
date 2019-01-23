@@ -1,7 +1,8 @@
 package com.ztbd.services;
 
 import com.ztbd.models.User;
-import com.ztbd.repositories.UserRepository;
+
+import com.ztbd.repositories_mongodb.UserNoSQLRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -15,10 +16,10 @@ import java.util.Optional;
 
 @Component
 public class CustomUserDetailService implements UserDetailsService {
-    private final UserRepository userRepository;
+    private final UserNoSQLRepository userRepository;
 
     @Autowired
-    public CustomUserDetailService(UserRepository userRepository) {
+    public CustomUserDetailService(UserNoSQLRepository userRepository) {
         this.userRepository = userRepository;
     }
 
