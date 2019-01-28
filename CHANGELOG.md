@@ -72,3 +72,22 @@ Zrobione :
 
 Zaplanowane :
 - Rozbudowa panelu administracyjnego
+
+### Aktualizacja 7.0 -  9. I .2019r. ###
+
+Zrobione :
+- Dodano widok
+- Wprowadzono replikację danych
+- Dodano tabele tymczasowe
+
+Zaplanowane:
+- Zmiana Systemu bazodanowego na nieralcyjny 
+- Rozbudowa panelu administracyjnego
+
+### Aktualizacja 8.0 -  23. I .2019r. ###
+
+Zrobione :
+- Zmieniono system bazodanowy na nieralacyjny model MongoDB
+
+Zaplanowane:
+- Rozbudowa panelu administracyjnego
