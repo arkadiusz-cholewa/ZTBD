@@ -1,10 +1,10 @@
 #### Rooms ####
 
-GET http://localhost:8181/hotels/5/rooms
+GET http://localhost:8181/hotels/5c509d3d79b4131814326bc3/rooms
 
 ###
 
-POST http://localhost:8181/hotels/5/rooms
+POST http://localhost:8181/hotels/5c509e9f79b4131814326bc6/rooms
 content-type: application/json
 
 {
@@ -14,7 +14,7 @@ content-type: application/json
     "state": "1"
 }
 ###
-PUT http://localhost:8181/hotels/3/rooms/42
+PUT http://localhost:8181/hotels/5c509e9f79b4131814326bc6/rooms/5c509dc379b4131814326bc4
 content-type: application/json
 
 {
@@ -32,7 +32,7 @@ DELETE http://localhost:8181/hotels/3/rooms/43
 GET http://localhost:8181/hotels
 
 ###
-GET http://localhost:8181/hotels/3
+GET http://localhost:8181/hotels/5c509d3d79b4131814326bc3
 ###
 POST http://localhost:8181/hotels
 content-type: application/json
@@ -93,7 +93,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huX2RvZSIsImV4cCI6MTU0N
 
 
 GET http://localhost:8181/protected/reservations
-Authorization: Bearer eyhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNTQ3MTA1Mjg3fQ.POdtc6hFeC0HOcLXakjJymO0wcZroOgMpFHS0jD-t6ncXWTTAJHcKj3X4IVM1okQMSgr-QrIygVc2o55p2vhCg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNTQ5MDE5MTI2fQ.007lEH6SlryF57jVkcI0zCmkSo7F56IXq5uNxEsEfvWDRTQsh5Mz_Hu8stPN5W5DkvB_-KiLUoGBrecLADQalA
 ###
 GET http://localhost:8181/protected/reservations/1
 ###
